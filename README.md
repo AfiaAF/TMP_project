@@ -7,6 +7,7 @@ This Streamlit app predicts whether a client is likely to subscribe to a term de
 ├── sub_pred_model.pkl          # Trained ML model
 ├── model_features.pkl          # List of model features
 ├── requirements.txt            # Python dependencies
+├── Client Sub Prediction.ipynb # Project Notebook
 ├── README.md                   # Project documentation
 └── bank-full.csv/              # Raw data
 
