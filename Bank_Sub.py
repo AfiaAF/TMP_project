@@ -19,7 +19,7 @@ if model is not None:
     marital = st.selectbox("Marital Status", ['married', 'single', 'divorced'])
     education = st.selectbox("Education", ['primary', 'secondary', 'tertiary', 'unknown'])
     default = st.selectbox("Has Credit Default?", ['yes', 'no'])
-    balance = st.number_input("Account Balance (€)", step=100)
+    balance = st.number_input("Account Balance (â‚¬)", step=100)
     housing = st.selectbox("Has Housing Loan?", ['yes', 'no'])
     loan = st.selectbox("Has Personal Loan?", ['yes', 'no'])
 
