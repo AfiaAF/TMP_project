@@ -66,7 +66,7 @@ input_frame = pd.DataFrame([input_dictionary])
 
 ## Aligning features with model's expectations
 expected_cols = model.named_steps['preprocessor'].get_feature_names_out()
-input_frame_model = input_frame.reindex(columns=expected_cols, fill_value=0)
+input_frame = input_frame.reindex(columns=expected_cols, fill_value=0)
 
 ## Prediction
 if st.button("Predict"):
