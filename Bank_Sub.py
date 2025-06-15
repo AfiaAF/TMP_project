@@ -6,6 +6,8 @@ import pandas as pd
 
 ## Loading model
 model = joblib.load("sub_pred_model.pkl")
+expected_cols = joblib.load("model_features.pkl")
+
 
 ## App title
 st.title("📊 Bank Deposit Subscription Predictor")
@@ -64,15 +66,19 @@ input_dictionary = {
 ## Converting to DataFrame
 input_frame = pd.DataFrame([input_dictionary])
 
-## Aligning features with model's expectations
-expected_cols = model.named_steps['preprocessor'].get_feature_names_out()
-input_frame = input_frame.reindex(columns=expected_cols, fill_value=0)
+## Encoding input to match model training
+input_encoded = pd.get_dummies(input_frame)
+
+
+## Aligning input with training features
+input_aligned = input_encoded.reindex(columns=expected_cols, fill_value=0)
 
 ## Prediction
 if st.button("Predict"):
     try:
-        prediction = model.predict(input_frame)
+        prediction = model.predict(input_aligned)
         result = "✅ Yes" if prediction[0] == 1 else "❌ No"
         st.success(f"Will the client subscribe? {result}")
     except Exception as e:
         st.error(f"Prediction failed: {e}")
+
