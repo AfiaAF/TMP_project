@@ -1,6 +1,7 @@
 
 
 import streamlit as st
+import joblib
 
 # Loading model
 model = joblib.load("sub_pred_model.pkl")
