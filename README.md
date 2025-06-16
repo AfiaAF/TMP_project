@@ -92,9 +92,12 @@ The machine learning model is trained with consideration of class imbalance usin
 
 ## Model Overview
   Model: Random Forest Classifier
+  
   Handling Imbalance: Class weights
-  Features Used:
+  
+  Features Used: 
     Age, Job, Marital Status, Education, Balance, Contact Type, etc.
+    
   Target: Whether the client subscribed (yes/no)
 
 
