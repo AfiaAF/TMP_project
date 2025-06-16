@@ -70,7 +70,7 @@ input_encoded = pd.get_dummies(input_frame)
 
 
 ## Aligning input with training features
-input_aligned = input_encoded.reindex(columns=expected_cols, fill_value=0)
+input_aligned = input_encoded.reindex(columns=model, fill_value=0)
 
 ## Prediction
 if st.button("Predict"):
