@@ -65,12 +65,6 @@ input_dictionary = {
 ## Converting to DataFrame
 input_frame = pd.DataFrame([input_dictionary])
 
-## Encoding input to match model training
-input_encoded = pd.get_dummies(input_frame)
-
-
-## Aligning input with training features
-input_aligned = input_encoded.reindex(columns=model, fill_value=0)
 
 ## Prediction
 if st.button("Predict"):
