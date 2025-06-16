@@ -70,23 +70,23 @@ The machine learning model is trained with consideration of class imbalance usin
 
 ## Input Features Used
 
-  Age
-  Job
-  Marital status
-  Education
-  Default (has credit in default?)
-  Balance
-  Housing loan
-  Personal loan
-  Contact type
-  Month
-  Campaign count
-  Previous contacts
+  Age, 
+  Job, 
+  Marital status, 
+  Education, 
+  Default (has credit in default?), 
+  Balance, 
+  Housing loan, 
+  Personal loan, 
+  Contact type, 
+  Month, 
+  Campaign count, 
+  Previous contacts, 
   Poutcome (previous campaign outcome)
 
   Engineered features:
-    Age group
-    Balance level
+    Age group, 
+    Balance level, 
     Campaign efficiency
 
 
