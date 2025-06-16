@@ -39,16 +39,26 @@ The machine learning model is trained with consideration of class imbalance usin
 
 ## Machine Learning Workflow
 
-- Data Preprocessing
-  - Encoding categorical variables using `pd.get_dummies`
-  - Feature engineering: age groups, campaign efficiency, balance level, etc.
-- Model Training
-  - Random Forest Classifier with class weights
-- Model Evaluation
-  - Accuracy, Precision, Recall, F1 Score
-- Export
-  - Trained model saved using `joblib`
-  - Feature list saved for prediction alignment
+1. **Data Preprocessing**
+   - Handled missing values and data types
+   - Engineered features such as `age_group`, `balance_level`, and `campaign_efficiency`
+   - One-hot encoded categorical variables
+
+2. **Model Training**
+   - Model used: `RandomForestClassifier` with `class_weight='balanced'` to handle class imbalance
+   - Performance metrics used:
+     - Accuracy
+     - Precision
+     - Recall
+     - F1 Score
+
+3. **Model Evaluation**
+   - Compared baseline model with class-weighted and SMOTE-enhanced versions
+   - Selected the class-weighted model for deployment based on better balance between precision and recall
+
+4. **Deployment**
+   - Created a Streamlit app
+   - Saved the model and feature schema using `joblib`
 
 ---
 
@@ -107,9 +117,24 @@ The machine learning model is trained with consideration of class imbalance usin
   Target: Whether the client subscribed (yes/no)
 
 
+
 ## Model Performance Summary
   Model |	Accuracy |	Precision	| Recall	| F1 Score
   
   Random Forest (raw)	| 0.88	| 0.57	| 0.23	| 0.33
  
   Weighted Model |	✅ Improved Recall and F1 Score	        
+
+
+## Conclusion: 
+  This project demonstrates the full machine learning lifecycle:
+
+  Data exploration and preprocessing
+  
+  Feature engineering and model building
+  
+  Evaluation with class imbalance consideration
+  
+  Real-time deployment using Streamlit
+  
+  The live app serves as a practical decision support tool.
