@@ -100,5 +100,7 @@ The machine learning model is trained with consideration of class imbalance usin
 
 ## Model Performance Summary
   Model |	Accuracy |	Precision	| Recall	| F1 Score
+  
   Random Forest (raw)	| 0.88	| 0.57	| 0.23	| 0.33
+ 
   Weighted Model |	✅ Improved Recall and F1 Score	        
