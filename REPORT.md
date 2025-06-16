@@ -3,12 +3,19 @@
 This Streamlit app predicts whether a client is likely to subscribe to a term deposit based on various factors (e.g. personal, campaign-related data) using a trained Random Forest classifier.
 
 📦 bank-subscription-app-structure/
+
 ├── Bank_Sub.py                 # Streamlit app
+
 ├── sub_pred_model.pkl          # Trained ML model
+
 ├── model_features.pkl          # List of model features
+
 ├── requirements.txt            # Python dependencies
+
 ├── Client Sub Prediction.ipynb # Project Notebook
+
 ├── README.md                   # Project documentation
+
 └── bank-full.csv/              # Raw data
 
 ---
@@ -58,7 +65,7 @@ The machine learning model is trained with consideration of class imbalance usin
       venv\Scripts\activate # Windows
      
       python3 -m venv venv
-      source venv/bin/activate  #macOS/Linux
+      source venv/bin/activate  # macOS/Linux
    ```
 
  2 **Install dependencies**
