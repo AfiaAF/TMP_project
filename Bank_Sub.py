@@ -6,7 +6,6 @@ import pandas as pd
 
 ## Loading model
 model = joblib.load("sub_pred_model.pkl")
-expected_cols = joblib.load("model_features.pkl")
 
 
 ## App title
