@@ -57,7 +57,6 @@ The machine learning model is trained with consideration of class imbalance usin
 1 **Clone the repository**  
    ```bash
    git clone https://github.com/AfiaAF/TMP_project.git
-   cd TMP_project
    ```
 2 **Create and activate a virtual environment(Optional)**
    ```
