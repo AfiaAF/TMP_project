@@ -69,7 +69,7 @@ input_frame = pd.DataFrame([input_dictionary])
 ## Prediction
 if st.button("Predict"):
     try:
-        prediction = model.predict
+        prediction = model.predict(input_frame)
         result = "✅ Yes" if prediction[0] == 1 else "❌ No"
         st.success(f"Will the client subscribe? {result}")
     except Exception as e:
