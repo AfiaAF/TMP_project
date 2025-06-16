@@ -56,7 +56,7 @@ input_dictionary = {
     "month": month,
     "campaign": campaign,
     "previous": previous,
-    "previous_outcome": poutcome,
+    "poutcome": poutcome,
     "age_group": age_group,
     "balance_level": balance_level,
     "campaign_efficiency": campaign_efficiency
